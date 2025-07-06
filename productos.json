@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "nombre": "Arepas con Carne",
+    "descripcion": "Arepas rellenas con carne mechada",
+    "precio": 9500,
+    "stock": 10,
+    "imagen": "arepas-carne.webp"
+  },
+  {
+    "id": 2,
+    "nombre": "Bife de Chorizo",
+    "descripcion": "Bife jugoso con papas rústicas",
+    "precio": 17500,
+    "stock": 6,
+    "imagen": "bife-chorizo.webp"
+  },
+  {
+    "id": 3,
+    "nombre": "Budín de Pan",
+    "descripcion": "Postre clásico al horno con pasas",
+    "precio": 6000,
+    "stock": 8,
+    "imagen": "budin-pan.webp"
+  },
+  {
+    "id": 4,
+    "nombre": "Canelones de Espinaca",
+    "descripcion": "Canelones caseros con salsa blanca",
+    "precio": 12000,
+    "stock": 5,
+    "imagen": "canelones-espinaca.webp"
+  },
+  {
+    "id": 5,
+    "nombre": "Costillas BBQ",
+    "descripcion": "Costillas de cerdo en barbacoa",
+    "precio": 15500,
+    "stock": 4,
+    "imagen": "costillas-bbq.webp"
+  },
+  {
+    "id": 6,
+    "nombre": "Empanadas de Carne (3p/u)",
+    "descripcion": "Empanadas fritas rellenas de carne",
+    "precio": 7500,
+    "stock": 12,
+    "imagen": "empanadas-carne.webp"
+  },
+  {
+    "id": 7,
+    "nombre": "Ensalada César",
+    "descripcion": "Lechuga, crutones, parmesano y pollo",
+    "precio": 9000,
+    "stock": 10,
+    "imagen": "ensalada-cesar.webp"
+  },
+  {
+    "id": 8,
+    "nombre": "Ensalada de Frutas",
+    "descripcion": "Frutas frescas de estación",
+    "precio": 5500,
+    "stock": 15,
+    "imagen": "ensalada-frutas.webp"
+  },
+  {
+    "id": 9,
+    "nombre": "Flan con Dulce",
+    "descripcion": "Flan casero con dulce de leche",
+    "precio": 5000,
+    "stock": 8,
+    "imagen": "flan-dulce.webp"
+  },
+  {
+    "id": 10,
+    "nombre": "Guiso de Lentejas",
+    "descripcion": "Guiso tradicional con chorizo colorado",
+    "precio": 11000,
+    "stock": 6,
+    "imagen": "guiso-lentejas.webp"
+  },
+  {
+    "id": 11,
+    "nombre": "Hamburguesa Doble",
+    "descripcion": "Doble carne, cheddar, panceta",
+    "precio": 16000,
+    "stock": 4,
+    "imagen": "hamburguesa-doble.webp"
+  },
+  {
+    "id": 12,
+    "nombre": "Helado en Copa (2 Sabores)",
+    "descripcion": "Copa con sabores a elección",
+    "precio": 6500,
+    "stock": 20,
+    "imagen": "helado-copa-2.webp"
+  },
+  {
+    "id": 13,
+    "nombre": "Helado en Copa Clásica",
+    "descripcion": "Helado con barquillo y dulce",
+    "precio": 6000,
+    "stock": 15,
+    "imagen": "helado-copa.webp"
+  },
+  {
+    "id": 14,
+    "nombre": "Milanesa Napolitana",
+    "descripcion": "Con salsa, jamón y muzzarella",
+    "precio": 13500,
+    "stock": 6,
+    "imagen": "milanesa-napolitana.webp"
+  },
+  {
+    "id": 15,
+    "nombre": "Panchos Clásicos (2p/u)",
+    "descripcion": "Panchos con aderezos a elección",
+    "precio": 5000,
+    "stock": 9,
+    "imagen": "panchos-clasicos.webp"
+  },
+  {
+    "id": 16,
+    "nombre": "Panqueques con Dulce",
+    "descripcion": "Panqueques con dulce de leche",
+    "precio": 7000,
+    "stock": 10,
+    "imagen": "panqueques-dulce.webp"
+  },
+  {
+    "id": 17,
+    "nombre": "Papas Rústicas",
+    "descripcion": "Papas al horno con especias",
+    "precio": 6000,
+    "stock": 7,
+    "imagen": "papas-rusticas.webp"
+  },
+  {
+    "id": 18,
+    "nombre": "Pastel de Papas",
+    "descripcion": "Relleno de carne y puré gratinado",
+    "precio": 11000,
+    "stock": 5,
+    "imagen": "pastel-papas.webp"
+  },
+  {
+    "id": 19,
+    "nombre": "Pizza Muzzarella",
+    "descripcion": "Pizza clásica con muzzarella",
+    "precio": 10000,
+    "stock": 8,
+    "imagen": "pizza-muzzarella.webp"
+  },
+  {
+    "id": 20,
+    "nombre": "Pollo Rostizado",
+    "descripcion": "Pollo entero con especias al horno",
+    "precio": 18000,
+    "stock": 5,
+    "imagen": "pollo-rostizado.webp"
+  },
+  {
+    "id": 21,
+    "nombre": "Ravioles con Salsa",
+    "descripcion": "Ravioles caseros con tuco",
+    "precio": 12000,
+    "stock": 6,
+    "imagen": "ravioles-salsa.webp"
+  },
+  {
+    "id": 22,
+    "nombre": "Sandwich de Hamburguesa",
+    "descripcion": "Pan, carne, lechuga y tomate",
+    "precio": 14000,
+    "stock": 6,
+    "imagen": "sandwich-hamburguesa.webp"
+  },
+  {
+    "id": 23,
+    "nombre": "Sandwich de Lomito (Light)",
+    "descripcion": "Lomito bajo en grasa con verduras",
+    "precio": 14500,
+    "stock": 4,
+    "imagen": "sandwich-lomito-low.jpg"
+  },
+  {
+    "id": 24,
+    "nombre": "Sandwich de Lomito",
+    "descripcion": "Lomo completo con huevo y jamón",
+    "precio": 15500,
+    "stock": 3,
+    "imagen": "sandwich-lomito.webp"
+  },
+  {
+    "id": 25,
+    "nombre": "Sopa Crema de Calabaza",
+    "descripcion": "Sopa cremosa con croutones",
+    "precio": 6000,
+    "stock": 5,
+    "imagen": "sopa-crema.webp"
+  },
+  {
+    "id": 26,
+    "nombre": "Sorrentinos de Jamón y Queso",
+    "descripcion": "Sorrentinos con salsa a elección",
+    "precio": 12500,
+    "stock": 6,
+    "imagen": "sorrentinos-jamon.webp"
+  },
+  {
+    "id": 27,
+    "nombre": "Sushi Rolls (6p/u)",
+    "descripcion": "Rolls de salmón, palta y queso",
+    "precio": 16000,
+    "stock": 3,
+    "imagen": "sushi-rolls.webp"
+  },
+  {
+    "id": 28,
+    "nombre": "Tacos Mexicanos",
+    "descripcion": "Carne, lechuga, tomate y salsa",
+    "precio": 11000,
+    "stock": 4,
+    "imagen": "tacos-mexicanos.webp"
+  },
+  {
+    "id": 29,
+    "nombre": "Tarta Vegetal",
+    "descripcion": "Tarta casera de verduras variadas",
+    "precio": 8500,
+    "stock": 5,
+    "imagen": "tarta-vegetal.webp"
+  },
+  {
+    "id": 30,
+    "nombre": "Tiramisú Casero",
+    "descripcion": "Postre italiano con café y cacao",
+    "precio": 7500,
+    "stock": 4,
+    "imagen": "tiramisu-casero.webp"
+  }
+]
