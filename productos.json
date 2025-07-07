@@ -254,5 +254,13 @@
   "precio": 20000,
   "stock": 30,
   "imagen": "pizza-calabreza.webp"
+  },
+  {
+  "id": 1751856745671,
+  "nombre": "Picada quesos variedad",
+  "descripcion": "una selección de diferentes tipos de quesos acompañados de otros ingredientes como embutidos, pan, aceitunas y snacks",
+  "precio": 15000,
+  "stock": 10,
+  "imagen": "picada-quesos-variedad.webp"
   }
 ]
