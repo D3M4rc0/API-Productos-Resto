@@ -238,5 +238,13 @@
     "precio": 7500,
     "stock": 4,
     "imagen": "tiramisu-casero.webp"
-  }
+  },
+  {
+  "id": 1751846564742,
+  "nombre": "cheesecake-chocolate",
+  "descripcion": "bfbdf",
+  "precio": 2500,
+  "stock": 12,
+  "imagen": "cheesecake-chocolate.webp"
+}
 ]
