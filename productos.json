@@ -238,5 +238,13 @@
     "precio": 7500,
     "stock": 4,
     "imagen": "tiramisu-casero.webp"
-  }
+  },
+  {
+  "id": 1751849272800,
+  "nombre": "cheesecake chocolate",
+  "descripcion": "Galletitas secas, Manteca, Queso crema, - Azúcar, Crema de leche, Manteca, Ralladura limón",
+  "precio": 2500,
+  "stock": 12,
+  "imagen": "cheesecake-chocolate.webp"
+}
 ]
