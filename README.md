@@ -57,7 +57,9 @@ fetch('https://D3M4rc0.github.io/API-Productos-Resto/productos.json')
 ## Cap:
 
 ###Pizza Muzzarella
-![Pizza Muzzarella](https://D3M4rc0.github.io/API-Productos-Resto/img/productos/pizza-muzzarella.webp" alt="Pizza Muzzarella)
+<!-- ![Pizza Muzzarella](https://D3M4rc0.github.io/API-Productos-Resto/img/productos/pizza-muzzarella.webp" alt="Pizza Muzzarella) -->
+<img src="https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/img/productos/pizza-muzzarella.webp" alt="Pizza Muzzarella" width="600"/>
+
 
 ## Observaciones:
 
