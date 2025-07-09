@@ -20,7 +20,7 @@ Está alojado en GitHub Pages y permite al frontend de un sitio web consumir los
 
 ## Cap:
 
-###Productos JSON
+### Productos JSON
 ![Productos JSON](img/caps/productos-json.jpg)
 
 ## ¿Para qué sirve?:
@@ -43,7 +43,7 @@ fetch('https://D3M4rc0.github.io/API-Productos-Resto/productos.json')
 
 ## Cap:
 
-###Sección Productos
+### Sección Productos
 ![Sección Productos](img/caps/seccion-productos.png)
 
 
@@ -56,9 +56,11 @@ fetch('https://D3M4rc0.github.io/API-Productos-Resto/productos.json')
 
 ## Cap:
 
-###Pizza Muzzarella
+
+### Pizza Muzzarella
 <!-- ![Pizza Muzzarella](https://D3M4rc0.github.io/API-Productos-Resto/img/productos/pizza-muzzarella.webp" alt="Pizza Muzzarella) -->
 <img src="https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/img/productos/pizza-muzzarella.webp" alt="Pizza Muzzarella" width="600"/>
+
 
 
 ## Observaciones:
