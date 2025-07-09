@@ -1,10 +1,10 @@
-# API Simulada de Productos para eCommerce Resto Bar
+# API Simulada de Productos para e-Commerce Resto Bar
 
 ## Descripción:
 
 Este repo funcionaría como una API simulada para un sitio web estilo e-commerce de un Resto Bar. Contiene un archivo `productos.json` con la información de los productos y una carpeta con las imágenes correspondientes.
 
-Está alojado en GitHub Pages y permite al frontend de un sitioweb consumir los datos de productos de manera realista usando `fetch()` en JavaScript. Sirve como fuente de productos para la sección del catálogo o tarjetas, carrito de compras, o cualquier funcionalidad relacionada.
+Está alojado en GitHub Pages y permite al frontend de un sitio web consumir los datos de productos de manera realista usando `fetch()` en JavaScript. Sirve como fuente de productos para la sección del catálogo o tarjetas, carrito de compras, o cualquier funcionalidad relacionada.
 
 ## Estructura del Proyecto:
 
