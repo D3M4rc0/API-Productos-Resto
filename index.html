@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Productos Resto Bar</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Inter, system-ui, sans-serif;
+        background: #f3f4f6;
+        color: #111827;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(180deg, #e5e7eb 0%, #ffffff 100%);
+      }
+      .page {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 32px 24px 48px;
+      }
+      header {
+        margin-bottom: 32px;
+      }
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 3.2vw, 3rem);
+        line-height: 1.05;
+      }
+      p.lead {
+        margin: 16px 0 0;
+        color: #4b5563;
+        font-size: 1.05rem;
+      }
+      .card {
+        background: #ffffff;
+        border: 1px solid #d1d5db;
+        border-radius: 24px;
+        box-shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
+        padding: 28px;
+        margin-bottom: 24px;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-size: 0.85rem;
+        color: #111827;
+        background: #e0f2fe;
+        border-radius: 999px;
+        padding: 0.45rem 0.85rem;
+        margin-bottom: 16px;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.55rem;
+        padding: 0.95rem 1.35rem;
+        border-radius: 999px;
+        font-weight: 700;
+        color: #ffffff;
+        background: #2563eb;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+      }
+      .button.secondary {
+        background: #1f2937;
+      }
+      code {
+        background: #f8fafc;
+        color: #111827;
+        padding: 0.35rem 0.55rem;
+        border-radius: 0.55rem;
+        font-family: ui-monospace, SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+      }
+      pre {
+        overflow-x: auto;
+        padding: 18px;
+        background: #111827;
+        color: #f8fafc;
+        border-radius: 1rem;
+        line-height: 1.55;
+        font-family: ui-monospace, SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+        font-size: 0.95rem;
+        margin: 0;
+      }
+      .grid {
+        display: grid;
+        gap: 24px;
+      }
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .note {
+        margin-top: 20px;
+        padding: 18px;
+        border-radius: 20px;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+      }
+      footer {
+        margin-top: 40px;
+        font-size: 0.95rem;
+        color: #6b7280;
+      }
+      @media (max-width: 720px) {
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <span class="badge">GitHub Pages | gh-pages</span>
+        <h1>API Productos Resto Bar</h1>
+        <p class="lead">Este sitio sirve el JSON de productos y también muestra ejemplos de uso para tu frontend.</p>
+      </header>
+
+      <section class="card">
+        <h2>Redirección automática</h2>
+        <p>En unos segundos esta página te redirigirá automáticamente al JSON:</p>
+        <p><strong><code>productos.json</code></strong></p>
+        <a class="button" href="productos.json">Ir ahora a productos.json</a>
+        <p class="note">Si no te redirige, haz clic en el botón o usa la URL directa.</p>
+      </section>
+
+      <section class="card">
+        <h2>Documentación completa</h2>
+        <div class="grid grid-2">
+          <div>
+            <h3>Endpoint JSON</h3>
+            <pre><code>https://d3m4rc0.github.io/API-Productos-Resto/productos.json</code></pre>
+            <h3>Raw JSON</h3>
+            <pre><code>https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/productos.json</code></pre>
+          </div>
+          <div>
+            <h3>Endpoint de imagen</h3>
+            <pre><code>https://d3m4rc0.github.io/API-Productos-Resto/img/productos/arepas-carne.webp</code></pre>
+            <h3>Raw imagen</h3>
+            <pre><code>https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/img/productos/arepas-carne.webp</code></pre>
+          </div>
+        </div>
+
+        <h3>Consumir el JSON desde JavaScript</h3>
+        <pre><code>fetch('https://d3m4rc0.github.io/API-Productos-Resto/productos.json')
+  .then(res => res.json())
+  .then(productos => {
+    console.log(productos);
+  });</code></pre>
+
+        <h3>Ejemplo de imagen</h3>
+        <pre><code>&lt;img src="https://d3m4rc0.github.io/API-Productos-Resto/img/productos/arepas-carne.webp" alt="Arepas con Carne" /&gt;</code></pre>
+      </section>
+
+      <section class="card">
+        <h2>¿Qué se muestra aquí?</h2>
+        <p>Esta página es un <strong>index de ayuda</strong> para tu API estática. Si prefieres, puedes eliminarla y la raíz mostrará directamente el JSON o el README según la configuración de Pages.</p>
+        <div class="note">
+          <strong>Importante:</strong> al mantener este <code>index.html</code>, la raíz de tu sitio <code>/</code> muestra esta página en lugar del README.
+        </div>
+      </section>
+
+      <footer>
+        <p>Si quieres que la raíz sea solo el JSON, puedes eliminar este archivo y volver a publicar Pages.</p>
+      </footer>
+    </div>
+
+    <script>
+      setTimeout(() => {
+        window.location.href = 'productos.json';
+      }, 4000);
+    </script>
+  </body>
+</html>
