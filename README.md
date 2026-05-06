@@ -34,6 +34,16 @@ Este repositorio expone directamente el archivo `productos.json` como fuente de 
 1. En tu proyecto frontend, consumir los datos así:
 
 ```js
+fetch('https://d3m4rc0.github.io/API-Productos-Resto/productos.json')
+  .then(res => res.json())
+  .then(productos => {
+    // Usar los productos aquí
+  });
+```
+
+Si necesitas, también puedes usar como alternativa la URL raw:
+
+```js
 fetch('https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/productos.json')
   .then(res => res.json())
   .then(productos => {
@@ -48,7 +58,7 @@ fetch('https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/produc
 2. Para mostrar imágenes desde la API:
 
 ```html
-<img src="https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/img/productos/arepas-carne.webp" alt="Pizza Muzzarella">
+<img src="https://d3m4rc0.github.io/API-Productos-Resto/img/productos/arepas-carne.webp" alt="Pizza Muzzarella">
 ```
 
 ## Cap:

@@ -161,6 +161,12 @@
       </section>
 
       <section class="card">
+        <h2>Documentación para usuarios</h2>
+        <p>Consulta la guía de uso para saber cómo consumir la API sin entrar en detalles técnicos.</p>
+        <a class="button secondary" href="/docs/uso.html">Abrir guía de uso</a>
+      </section>
+
+      <section class="card">
         <h2>¿Qué se muestra aquí?</h2>
         <p>Esta página es un <strong>index de ayuda</strong> para tu API estática. Si prefieres, puedes eliminarla y la raíz mostrará directamente el JSON o el README según la configuración de Pages.</p>
         <div class="note">
@@ -174,6 +180,16 @@
     </div>
 
     <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(() => {
+            console.log('Servicio de API simulada activo');
+          })
+          .catch(() => {
+            console.warn('No se pudo registrar el servicio de API simulada');
+          });
+      }
+
       setTimeout(() => {
         window.location.href = 'productos.json';
       }, 15000);
