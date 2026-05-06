@@ -63,16 +63,19 @@
         border-radius: 999px;
         font-weight: 700;
         color: #f5f5dc;
-        background: #404040;
+        background: #1d4ed8;
         text-decoration: none;
         border: none;
         cursor: pointer;
       }
       .button.secondary {
-        background: #1a1a1a;
+        background: #0f172a;
+      }
+      .button.stop {
+        background: #f97316;
       }
       code {
-        background: #2c5282;
+        background: #1d4ed8;
         color: #f5f5dc;
         padding: 0.35rem 0.55rem;
         border-radius: 0.55rem;
@@ -81,13 +84,16 @@
       pre {
         overflow-x: auto;
         padding: 18px;
-        background: #2d3748;
+        background: #1e3a8a;
         color: #f5f5dc;
         border-radius: 1rem;
         line-height: 1.55;
         font-family: ui-monospace, SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
         font-size: 0.95rem;
         margin: 0;
+      }
+      .highlight-orange {
+        color: #fbbf24;
       }
       .grid {
         display: grid;
@@ -127,8 +133,11 @@
       <section class="card">
         <h2>Redirección automática</h2>
         <p>En unos segundos esta página te redirigirá automáticamente al JSON:</p>
-        <p><strong><code>productos.json</code></strong></p>
-        <a class="button" href="productos.json">Ir ahora a productos.json</a>
+        <p><strong><code class="highlight-orange">productos.json</code></strong></p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a class="button" href="productos.json">Ir ahora a productos.json</a>
+          <button class="button stop" id="stopRedirect">Detener redirección</button>
+        </div>
         <p class="note">Si no te redirige, haz clic en el botón o usa la URL directa.</p>
       </section>
 
@@ -190,9 +199,18 @@
           });
       }
 
-      setTimeout(() => {
+      const redirectTimer = setTimeout(() => {
         window.location.href = 'productos.json';
       }, 15000);
+
+      const stopButton = document.getElementById('stopRedirect');
+      if (stopButton) {
+        stopButton.addEventListener('click', () => {
+          clearTimeout(redirectTimer);
+          stopButton.textContent = 'Redirección detenida';
+          stopButton.disabled = true;
+        });
+      }
     </script>
   </body>
 </html>
