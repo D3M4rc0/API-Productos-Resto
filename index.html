@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Productos - Resto Bar</title>
+    <style>
+      body {
+        font-family: Inter, system-ui, sans-serif;
+        line-height: 1.6;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 24px;
+        background: #fafafa;
+        color: #111;
+      }
+      header {
+        margin-bottom: 24px;
+      }
+      pre {
+        background: #1f2937;
+        color: #f8fafc;
+        padding: 16px;
+        border-radius: 12px;
+        overflow-x: auto;
+      }
+      code {
+        font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+      }
+      a {
+        color: #2563eb;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>API Simulada de Productos para e-Commerce Resto Bar</h1>
+      <p>
+        Este repositorio expone los datos desde <strong>productos.json</strong> y las imágenes desde <strong>img/productos/</strong>.
+      </p>
+    </header>
+
+    <section>
+      <h2>Endpoint JSON</h2>
+      <p>
+        Usa el siguiente URL para consumir los datos desde el frontend:
+      </p>
+      <pre><code>https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/productos.json</code></pre>
+      <p>
+        Si GitHub Pages está publicado correctamente, el JSON también debería ser accesible en:
+      </p>
+      <pre><code>https://d3m4rc0.github.io/API-Productos-Resto/productos.json</code></pre>
+    </section>
+
+    <section>
+      <h2>Ejemplo de consumo</h2>
+      <pre><code>fetch('https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/productos.json')
+  .then(res => res.json())
+  .then(productos => {
+    console.log(productos);
+  });</code></pre>
+    </section>
+
+    <section>
+      <h2>Ejemplo de imagen</h2>
+      <p>
+        Usa la ruta directa a la carpeta de imágenes:
+      </p>
+      <pre><code>https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/img/productos/arepas-carne.webp</code></pre>
+      <p>HTML ejemplo:</p>
+      <pre><code>&lt;img src="https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/img/productos/arepas-carne.webp" alt="Arepas con Carne" /&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2>Notas</h2>
+      <ul>
+        <li>Este sitio estático es solo lectura (GET).</li>
+        <li>Los productos se actualizan directamente en <code>productos.json</code>.</li>
+        <li>No hay backend ni endpoints dinámicos adicionales.</li>
+      </ul>
+    </section>
+  </body>
+</html>
