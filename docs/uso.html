@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cómo usar la API de Productos</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: Inter, system-ui, sans-serif;
+        background: #1a1a1a;
+        color: #f5f5dc;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+      }
+      .page {
+        max-width: 90vw;
+        margin: 0 auto;
+        padding: 32px 24px 48px;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #f5f5dc;
+      }
+      p {
+        color: #d3d3d3;
+      }
+      .card {
+        background: #2a2a2a;
+        border: 1px solid #404040;
+        border-radius: 24px;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+        padding: 28px;
+        margin-bottom: 24px;
+      }
+      .link {
+        color: #f5f5dc;
+        text-decoration: none;
+      }
+      .link:hover {
+        text-decoration: underline;
+      }
+      pre {
+        overflow-x: auto;
+        padding: 18px;
+        background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+        color: #f5f5dc;
+        border-radius: 1rem;
+        line-height: 1.55;
+        font-family: ui-monospace, SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+        font-size: 0.95rem;
+        margin: 0;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      li {
+        margin-bottom: 0.75rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <h1>Cómo usar la API de Productos</h1>
+      <p>Esta carpeta recoge información de uso para los visitantes y desarrolladores que consumen la API. Aquí no se explica el mecanismo interno, solo cómo usarla.</p>
+
+      <div class="card">
+        <h2>1. ¿Qué puedes usar?</h2>
+        <p>La API te permite acceder al listado de productos y ver cada producto individual. También ofrece respuestas simuladas cuando se usan otros métodos HTTP como <strong>POST</strong>, <strong>PUT</strong> o <strong>DELETE</strong>.</p>
+      </div>
+
+      <div class="card">
+        <h2>2. Endpoints disponibles</h2>
+        <ul>
+          <li><strong>GET</strong> <span class="link">https://d3m4rc0.github.io/API-Productos-Resto/api/productos</span></li>
+          <li><strong>GET</strong> <span class="link">https://d3m4rc0.github.io/API-Productos-Resto/api/productos/1</span> (para un producto específico)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>3. Métodos HTTP adicionales</h2>
+        <p>Si se usa <strong>POST</strong>, <strong>PUT</strong> o <strong>DELETE</strong>, la API devolverá una respuesta automática. Estas peticiones son útiles para probar el comportamiento del frontend, aunque no modifican datos reales.</p>
+        <ul>
+          <li><strong>POST</strong> a <span class="link">/api/productos</span></li>
+          <li><strong>PUT</strong> a <span class="link">/api/productos/1</span></li>
+          <li><strong>DELETE</strong> a <span class="link">/api/productos/1</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>4. ¿Qué verás en la respuesta?</h2>
+        <p>Las respuestas para métodos distintos a GET te dirán que la petición fue recibida y mostrarán el tipo de operación. Eso permite hacer pruebas sin necesidad de un servidor real.</p>
+      </div>
+
+      <div class="card">
+        <h2>5. Recomendación</h2>
+        <p>Abre primero la página principal del sitio para activar la API simulada. Luego podrás usar cualquiera de los endpoints desde tu frontend.</p>
+      </div>
+
+      <div class="card">
+        <h2>6. Recursos</h2>
+        <ul>
+          <li>Documento principal: <a class="link" href="/API-Productos-Resto/">https://d3m4rc0.github.io/API-Productos-Resto/</a></li>
+          <li>JSON directo: <a class="link" href="https://d3m4rc0.github.io/API-Productos-Resto/productos.json">https://d3m4rc0.github.io/API-Productos-Resto/productos.json</a></li>
+          <li>API productos: <a class="link" href="/API-Productos-Resto/api/productos">/API-Productos-Resto/api/productos</a></li>
+          <li>API producto individual: <a class="link" href="/API-Productos-Resto/api/productos/1">/API-Productos-Resto/api/productos/1</a></li>
+          <li>Guía de uso: <a class="link" href="/API-Productos-Resto/docs/uso.html">/API-Productos-Resto/docs/uso.html</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

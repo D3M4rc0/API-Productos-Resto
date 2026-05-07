@@ -1,0 +1,8 @@
+{
+  "id": 20,
+  "nombre": "Pollo Rostizado",
+  "descripcion": "Pollo entero con especias al horno",
+  "precio": 18000,
+  "stock": 5,
+  "imagen": "pollo-rostizado.webp"
+}

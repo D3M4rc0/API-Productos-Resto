@@ -1,0 +1,8 @@
+{
+  "id": 3,
+  "nombre": "Budín de Pan",
+  "descripcion": "Postre clásico al horno con pasas",
+  "precio": 6000,
+  "stock": 8,
+  "imagen": "budin-pan.webp"
+}

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Productos Resto Bar</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: Inter, system-ui, sans-serif;
+        background: #1a1a1a;
+        color: #f5f5dc;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+      }
+      .page {
+        max-width: 90vw;
+        margin: 0 auto;
+        padding: 32px 24px 48px;
+      }
+      header {
+        margin-bottom: 32px;
+      }
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 3.2vw, 3rem);
+        line-height: 1.05;
+        color: #f5f5dc;
+      }
+      p.lead {
+        margin: 16px 0 0;
+        color: #d3d3d3;
+        font-size: 1.05rem;
+      }
+      .card {
+        background: #2a2a2a;
+        border: 1px solid #404040;
+        border-radius: 24px;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+        padding: 28px;
+        margin-bottom: 24px;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        font-size: 0.85rem;
+        color: #f5f5dc;
+        background: #404040;
+        border-radius: 999px;
+        padding: 0.45rem 0.85rem;
+        margin-bottom: 16px;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.55rem;
+        padding: 0.95rem 1.35rem;
+        border-radius: 999px;
+        font-weight: 700;
+        color: #f5f5dc;
+        background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+      }
+      .button.secondary {
+        background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+      }
+      .button.stop {
+        background: #f97316;
+      }
+      .button.stop:disabled {
+        background: #dc2626;
+        cursor: not-allowed;
+        opacity: 0.6;
+      }
+      code {
+        background: transparent;
+        color: #f5f5dc;
+        padding: 0;
+        border-radius: 0;
+        font-family: ui-monospace, SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+      }
+      pre {
+        overflow-x: auto;
+        padding: 18px;
+        background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+        color: #f5f5dc;
+        border-radius: 1rem;
+        line-height: 1.55;
+        font-family: ui-monospace, SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+        font-size: 0.95rem;
+        margin: 0;
+        position: relative;
+      }
+      .copy-container {
+        position: relative;
+        margin-bottom: 1rem;
+      }
+      .copy-button {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        background: #404040;
+        color: #f5f5dc;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.25rem 0.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+      }
+      .copy-button:hover {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+      .copy-button.copied {
+        background: #10b981;
+        color: white;
+      }
+      .highlight-orange {
+        color: #000000;
+        background: #f5f5dc;
+        padding: 0.15rem 0.35rem;
+        border-radius: 0.4rem;
+      }
+      .grid {
+        display: grid;
+        gap: 24px;
+      }
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .note {
+        margin-top: 20px;
+        padding: 18px;
+        border-radius: 20px;
+        background: #2a2a2a;
+        border: 1px solid #404040;
+        color: #d3d3d3;
+      }
+      footer {
+        margin-top: 40px;
+        font-size: 0.95rem;
+        color: #a0a0a0;
+      }
+      @media (max-width: 720px) {
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <span class="badge">GitHub Pages | gh-pages</span>
+        <h1>API Productos Resto Bar</h1>
+        <p class="lead">Este sitio sirve el JSON de productos y también muestra ejemplos de uso para tu frontend.</p>
+      </header>
+
+      <section class="card">
+        <h2>Redirección automática</h2>
+        <p>En unos segundos esta página te redirigirá automáticamente al JSON:</p>
+        <p><strong><code class="highlight-orange">productos.json</code></strong></p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a class="button" href="productos.json">Ir ahora a productos.json</a>
+          <button class="button stop" id="stopRedirect">Detener redirección</button>
+        </div>
+        <p class="note">Si no te redirige, haz clic en el botón o usa la URL directa.</p>
+      </section>
+
+      <section class="card">
+        <h2>Documentación completa</h2>
+        <div class="grid grid-2">
+          <div>
+            <h3>Endpoint JSON</h3>
+            <div class="copy-container">
+              <pre><code>https://d3m4rc0.github.io/API-Productos-Resto/productos.json</code></pre>
+              <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">📋</button>
+            </div>
+            <h3>Raw JSON</h3>
+            <div class="copy-container">
+              <pre><code>https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/productos.json</code></pre>
+              <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">📋</button>
+            </div>
+          </div>
+          <div>
+            <h3>Endpoint de imagen</h3>
+            <div class="copy-container">
+              <pre><code>https://d3m4rc0.github.io/API-Productos-Resto/img/productos/arepas-carne.webp</code></pre>
+              <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">📋</button>
+            </div>
+            <h3>Raw imagen</h3>
+            <div class="copy-container">
+              <pre><code>https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/img/productos/arepas-carne.webp</code></pre>
+              <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">📋</button>
+            </div>
+          </div>
+        </div>
+
+        <h3>Consumir el JSON desde JavaScript</h3>
+        <div class="copy-container">
+          <pre><code>fetch('https://d3m4rc0.github.io/API-Productos-Resto/productos.json')
+  .then(res => res.json())
+  .then(productos => {
+    console.log(productos);
+  });</code></pre>
+          <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">📋</button>
+        </div>
+
+        <h3>API simulada (requiere visitar la página principal primero)</h3>
+        <div class="copy-container">
+          <pre><code>// Lista de productos
+fetch('https://d3m4rc0.github.io/API-Productos-Resto/api/productos')
+
+// Producto específico
+fetch('https://d3m4rc0.github.io/API-Productos-Resto/api/productos/1')
+
+// Métodos POST/PUT/DELETE también funcionan
+fetch('https://d3m4rc0.github.io/API-Productos-Resto/api/productos/1', {
+  method: 'POST',
+  body: JSON.stringify({nombre: 'Nuevo producto'})
+})</code></pre>
+          <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">📋</button>
+        </div>
+
+        <h3>Ejemplo de imagen</h3>
+        <div class="copy-container">
+          <pre><code>&lt;img src="https://d3m4rc0.github.io/API-Productos-Resto/img/productos/arepas-carne.webp" alt="Arepas con Carne" /&gt;</code></pre>
+          <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">📋</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Documentación para usuarios</h2>
+        <p>Consulta la guía de uso para saber cómo consumir la API sin entrar en detalles técnicos.</p>
+        <a class="button secondary" href="docs/uso.html">Abrir guía de uso</a>
+      </section>
+
+      <section class="card">
+        <h2>¿Qué se muestra aquí?</h2>
+        <p>Esta página es un <strong>index de ayuda</strong> para tu API estática. Si prefieres, puedes eliminarla y la raíz mostrará directamente el JSON o el README según la configuración de Pages.</p>
+        <div class="note">
+          <strong>Importante:</strong> al mantener este <code>index.html</code>, la raíz de tu sitio <code>/</code> muestra esta página en lugar del README.
+        </div>
+      </section>
+
+      <footer>
+        <p>Si quieres que la raíz sea solo el JSON, puedes eliminar este archivo y volver a publicar Pages.</p>
+      </footer>
+    </div>
+
+    <script>
+      let redirectTimer;
+
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/API-Productos-Resto/service-worker.js')
+          .then(() => {
+            console.log('Servicio de API simulada activo');
+          })
+          .catch(() => {
+            console.warn('No se pudo registrar el servicio de API simulada');
+          });
+      }
+
+      redirectTimer = setTimeout(() => {
+        window.location.href = 'productos.json';
+      }, 15000);
+
+      const stopButton = document.getElementById('stopRedirect');
+      if (stopButton) {
+        stopButton.addEventListener('click', () => {
+          clearTimeout(redirectTimer);
+          stopButton.textContent = 'Redirección detenida';
+          stopButton.disabled = true;
+          stopButton.style.background = '#f97316';
+        });
+      }
+
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+          // Mostrar feedback temporal
+          const button = event.target;
+          const originalText = button.textContent;
+          button.textContent = '✅';
+          button.classList.add('copied');
+          setTimeout(() => {
+            button.textContent = originalText;
+            button.classList.remove('copied');
+          }, 2000);
+        }).catch(err => {
+          console.error('Error al copiar:', err);
+          // Fallback para navegadores antiguos
+          const textArea = document.createElement('textarea');
+          textArea.value = text;
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textArea);
+
+          const button = event.target;
+          const originalText = button.textContent;
+          button.textContent = '✅';
+          button.classList.add('copied');
+          setTimeout(() => {
+            button.textContent = originalText;
+            button.classList.remove('copied');
+          }, 2000);
+        });
+      }
+    </script>
+  </body>
+</html>
