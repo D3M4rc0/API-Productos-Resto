@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cómo usar la API de Productos</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, sans-serif;
+        background: #071013;
+        color: #f2efe6;
+        line-height: 1.7;
+        padding: 32px;
+      }
+      .container {
+        max-width: 860px;
+        margin: 0 auto;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #f6f1dc;
+      }
+      p {
+        color: #d8d4c6;
+      }
+      .card {
+        background: #0f1720;
+        border: 1px solid #1f2a3a;
+        border-radius: 20px;
+        padding: 24px;
+        margin-bottom: 24px;
+      }
+      .link {
+        color: #8ab4f8;
+        text-decoration: none;
+      }
+      .link:hover {
+        text-decoration: underline;
+      }
+      pre {
+        background: #0e1724;
+        color: #e8e2cb;
+        padding: 18px;
+        border-radius: 16px;
+        overflow-x: auto;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      li {
+        margin-bottom: 0.75rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cómo usar la API de Productos</h1>
+      <p>Esta guía explica cómo usar la API de productos sin entrar en detalles técnicos.</p>
+
+      <div class="card">
+        <h2>1. ¿Qué puedes usar?</h2>
+        <p>La API te permite acceder al listado de productos y ver cada producto individual. También ofrece respuestas simuladas cuando se usan otros métodos HTTP como <strong>POST</strong>, <strong>PUT</strong> o <strong>DELETE</strong>.</p>
+      </div>
+
+      <div class="card">
+        <h2>2. Endpoints disponibles</h2>
+        <ul>
+          <li><strong>GET</strong> <span class="link">https://d3m4rc0.github.io/API-Productos-Resto/productos.json</span></li>
+          <li><strong>GET</strong> <span class="link">https://d3m4rc0.github.io/API-Productos-Resto/api/productos</span></li>
+          <li><strong>GET</strong> <span class="link">https://d3m4rc0.github.io/API-Productos-Resto/api/productos/1</span> (para un producto específico)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>3. Métodos HTTP adicionales</h2>
+        <p>Si se usa <strong>POST</strong>, <strong>PUT</strong> o <strong>DELETE</strong>, la API devolverá una respuesta automática. Estas peticiones son útiles para probar el comportamiento del frontend, aunque no modifican datos reales.</p>
+        <ul>
+          <li><strong>POST</strong> a <span class="link">/api/productos</span></li>
+          <li><strong>PUT</strong> a <span class="link">/api/productos/1</span></li>
+          <li><strong>DELETE</strong> a <span class="link">/api/productos/1</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>4. ¿Qué verás en la respuesta?</h2>
+        <p>Las respuestas para métodos distintos a GET te dirán que la petición fue recibida y mostrarán el tipo de operación. Eso permite hacer pruebas sin necesidad de un servidor real.</p>
+      </div>
+
+      <div class="card">
+        <h2>5. Recomendación</h2>
+        <p>Abre primero la página principal del sitio para activar la API simulada. Luego podrás usar cualquiera de los endpoints desde tu frontend.</p>
+      </div>
+
+      <div class="card">
+        <h2>6. Recursos</h2>
+        <ul>
+          <li>Documento principal: <a class="link" href="/">https://d3m4rc0.github.io/API-Productos-Resto/</a></li>
+          <li>JSON directo: <a class="link" href="productos.json">productos.json</a></li>
+          <li>Guía de uso: <a class="link" href="uso.html">uso.html</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
