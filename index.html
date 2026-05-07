@@ -84,7 +84,7 @@
       pre {
         overflow-x: auto;
         padding: 18px;
-        background: transparent;
+        background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
         color: #f5f5dc;
         border-radius: 1rem;
         line-height: 1.55;
@@ -105,13 +105,23 @@
         border: none;
         border-radius: 0.5rem;
         padding: 0.25rem 0.5rem;
-        font-size: 0.8rem;
+        font-size: 1rem;
         cursor: pointer;
         opacity: 0.7;
-        transition: opacity 0.2s;
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
       }
       .copy-button:hover {
         opacity: 1;
+        transform: scale(1.1);
+      }
+      .copy-button.copied {
+        background: #10b981;
+        color: white;
       }
       .highlight-orange {
         color: #000000;
@@ -172,24 +182,24 @@
             <h3>Endpoint JSON</h3>
             <div class="copy-container">
               <pre><code>https://d3m4rc0.github.io/API-Productos-Resto/productos.json</code></pre>
-              <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copiar</button>
+              <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">📋</button>
             </div>
             <h3>Raw JSON</h3>
             <div class="copy-container">
               <pre><code>https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/productos.json</code></pre>
-              <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copiar</button>
+              <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">📋</button>
             </div>
           </div>
           <div>
             <h3>Endpoint de imagen</h3>
             <div class="copy-container">
               <pre><code>https://d3m4rc0.github.io/API-Productos-Resto/img/productos/arepas-carne.webp</code></pre>
-              <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copiar</button>
+              <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">📋</button>
             </div>
             <h3>Raw imagen</h3>
             <div class="copy-container">
               <pre><code>https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/img/productos/arepas-carne.webp</code></pre>
-              <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copiar</button>
+              <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">📋</button>
             </div>
           </div>
         </div>
@@ -201,13 +211,13 @@
   .then(productos => {
     console.log(productos);
   });</code></pre>
-          <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copiar</button>
+          <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">📋</button>
         </div>
 
         <h3>Ejemplo de imagen</h3>
         <div class="copy-container">
           <pre><code>&lt;img src="https://d3m4rc0.github.io/API-Productos-Resto/img/productos/arepas-carne.webp" alt="Arepas con Carne" /&gt;</code></pre>
-          <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copiar</button>
+          <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">📋</button>
         </div>
       </section>
 
@@ -259,11 +269,11 @@
           // Mostrar feedback temporal
           const button = event.target;
           const originalText = button.textContent;
-          button.textContent = 'Copiado!';
-          button.style.background = '#10b981';
+          button.textContent = '✅';
+          button.classList.add('copied');
           setTimeout(() => {
             button.textContent = originalText;
-            button.style.background = '#404040';
+            button.classList.remove('copied');
           }, 2000);
         }).catch(err => {
           console.error('Error al copiar:', err);
@@ -277,11 +287,11 @@
 
           const button = event.target;
           const originalText = button.textContent;
-          button.textContent = 'Copiado!';
-          button.style.background = '#10b981';
+          button.textContent = '✅';
+          button.classList.add('copied');
           setTimeout(() => {
             button.textContent = originalText;
-            button.style.background = '#404040';
+            button.classList.remove('copied');
           }, 2000);
         });
       }
