@@ -1,0 +1,8 @@
+{
+  "id": 2,
+  "nombre": "Bife de Chorizo",
+  "descripcion": "Bife jugoso con papas rústicas",
+  "precio": 17500,
+  "stock": 6,
+  "imagen": "bife-chorizo.webp"
+}

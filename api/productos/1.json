@@ -1,0 +1,8 @@
+{
+  "id": 1,
+  "nombre": "Arepas con Carne",
+  "descripcion": "Arepas rellenas con carne mechada",
+  "precio": 9500,
+  "stock": 10,
+  "imagen": "arepas-carne.webp"
+}

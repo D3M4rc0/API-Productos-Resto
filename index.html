@@ -220,6 +220,22 @@
           <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">📋</button>
         </div>
 
+        <h3>API simulada (requiere visitar la página principal primero)</h3>
+        <div class="copy-container">
+          <pre><code>// Lista de productos
+fetch('https://d3m4rc0.github.io/API-Productos-Resto/api/productos/index.html')
+
+// Producto específico
+fetch('https://d3m4rc0.github.io/API-Productos-Resto/api/productos/1.html')
+
+// Métodos POST/PUT/DELETE también funcionan
+fetch('https://d3m4rc0.github.io/API-Productos-Resto/api/productos/1.html', {
+  method: 'POST',
+  body: JSON.stringify({nombre: 'Nuevo producto'})
+})</code></pre>
+          <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">📋</button>
+        </div>
+
         <h3>Ejemplo de imagen</h3>
         <div class="copy-container">
           <pre><code>&lt;img src="https://d3m4rc0.github.io/API-Productos-Resto/img/productos/arepas-carne.webp" alt="Arepas con Carne" /&gt;</code></pre>
@@ -230,7 +246,7 @@
       <section class="card">
         <h2>Documentación para usuarios</h2>
         <p>Consulta la guía de uso para saber cómo consumir la API sin entrar en detalles técnicos.</p>
-        <a class="button secondary" href="/API-Productos-Resto/docs/uso.html">Abrir guía de uso</a>
+        <a class="button secondary" href="/docs/uso.html">Abrir guía de uso</a>
       </section>
 
       <section class="card">

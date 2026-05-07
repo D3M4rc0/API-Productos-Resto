@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto API</title>
+    <script>
+        // Registrar service worker para API simulada
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(() => {
+                    console.log('Service Worker registrado para API');
+                    // Obtener el ID del producto de la URL
+                    const pathParts = window.location.pathname.split('/');
+                    const productId = pathParts[pathParts.length - 1].replace('.html', '');
+                    const apiUrl = '/api/productos/' + productId;
+
+                    // Hacer la petición
+                    fetch(apiUrl)
+                        .then(response => {
+                            if (response.ok) {
+                                return response.json();
+                            } else {
+                                return response.json().then(error => {
+                                    throw new Error(JSON.stringify(error));
+                                });
+                            }
+                        })
+                        .then(data => {
+                            document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+                        })
+                        .catch(error => {
+                            document.getElementById('response').textContent = 'Error: ' + error.message;
+                        });
+                })
+                .catch(error => {
+                    document.getElementById('response').textContent = 'Error registrando Service Worker: ' + error.message;
+                });
+        } else {
+            document.getElementById('response').textContent = 'Service Worker no soportado';
+        }
+    </script>
+</head>
+<body>
+    <pre id="response">Cargando...</pre>
+</body>
+</html>

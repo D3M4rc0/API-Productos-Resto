@@ -1,0 +1,8 @@
+{
+  "id": 5,
+  "nombre": "Costillas BBQ",
+  "descripcion": "Costillas de cerdo en barbacoa",
+  "precio": 15500,
+  "stock": 4,
+  "imagen": "costillas-bbq.webp"
+}

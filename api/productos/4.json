@@ -1,0 +1,8 @@
+{
+  "id": 4,
+  "nombre": "Canelones de Espinaca",
+  "descripcion": "Canelones caseros con salsa blanca",
+  "precio": 12000,
+  "stock": 5,
+  "imagen": "canelones-espinaca.webp"
+}
