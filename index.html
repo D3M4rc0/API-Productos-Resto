@@ -223,13 +223,13 @@
         <h3>API simulada (requiere visitar la página principal primero)</h3>
         <div class="copy-container">
           <pre><code>// Lista de productos
-fetch('https://d3m4rc0.github.io/API-Productos-Resto/api/productos/index.html')
+fetch('https://d3m4rc0.github.io/API-Productos-Resto/api/productos')
 
 // Producto específico
-fetch('https://d3m4rc0.github.io/API-Productos-Resto/api/productos/1.html')
+fetch('https://d3m4rc0.github.io/API-Productos-Resto/api/productos/1')
 
 // Métodos POST/PUT/DELETE también funcionan
-fetch('https://d3m4rc0.github.io/API-Productos-Resto/api/productos/1.html', {
+fetch('https://d3m4rc0.github.io/API-Productos-Resto/api/productos/1', {
   method: 'POST',
   body: JSON.stringify({nombre: 'Nuevo producto'})
 })</code></pre>
@@ -246,7 +246,7 @@ fetch('https://d3m4rc0.github.io/API-Productos-Resto/api/productos/1.html', {
       <section class="card">
         <h2>Documentación para usuarios</h2>
         <p>Consulta la guía de uso para saber cómo consumir la API sin entrar en detalles técnicos.</p>
-        <a class="button secondary" href="/docs/uso.html">Abrir guía de uso</a>
+        <a class="button secondary" href="docs/uso.html">Abrir guía de uso</a>
       </section>
 
       <section class="card">
@@ -266,7 +266,7 @@ fetch('https://d3m4rc0.github.io/API-Productos-Resto/api/productos/1.html', {
       let redirectTimer;
 
       if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.js')
+        navigator.serviceWorker.register('/API-Productos-Resto/service-worker.js')
           .then(() => {
             console.log('Servicio de API simulada activo');
           })

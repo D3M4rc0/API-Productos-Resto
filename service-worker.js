@@ -1,5 +1,6 @@
-const API_PREFIX = '/api/';
-const PRODUCTOS_JSON = '/productos.json';
+const BASE_PATH = '/API-Productos-Resto';
+const API_PREFIX = `${BASE_PATH}/api/`;
+const PRODUCTOS_JSON = `${BASE_PATH}/productos.json`;
 
 self.addEventListener('install', event => {
   event.waitUntil(self.skipWaiting());
@@ -25,7 +26,7 @@ self.addEventListener('fetch', event => {
 });
 
 async function handleApiRequest(request, url) {
-  const apiPath = url.pathname.replace(/^\/api/, '');
+  const apiPath = '/' + url.pathname.replace(new RegExp(`^${API_PREFIX}`), '');
 
   switch (request.method) {
     case 'GET':

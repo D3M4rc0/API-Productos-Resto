@@ -7,7 +7,7 @@
     <script>
         // Registrar service worker para API simulada
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/service-worker.js')
+            navigator.serviceWorker.register('/API-Productos-Resto/service-worker.js')
                 .then(() => {
                     console.log('Service Worker registrado para API');
                     // Una vez registrado, hacer la petición
