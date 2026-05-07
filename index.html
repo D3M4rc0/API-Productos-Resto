@@ -17,7 +17,7 @@
         background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
       }
       .page {
-        max-width: 980px;
+        max-width: 90vw;
         margin: 0 auto;
         padding: 32px 24px 48px;
       }
@@ -91,6 +91,27 @@
         font-family: ui-monospace, SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
         font-size: 0.95rem;
         margin: 0;
+        position: relative;
+      }
+      .copy-container {
+        position: relative;
+      }
+      .copy-button {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: #404040;
+        color: #f5f5dc;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: opacity 0.2s;
+      }
+      .copy-button:hover {
+        opacity: 1;
       }
       .highlight-orange {
         color: #000000;
@@ -149,27 +170,45 @@
         <div class="grid grid-2">
           <div>
             <h3>Endpoint JSON</h3>
-            <pre><code>https://d3m4rc0.github.io/API-Productos-Resto/productos.json</code></pre>
+            <div class="copy-container">
+              <pre><code>https://d3m4rc0.github.io/API-Productos-Resto/productos.json</code></pre>
+              <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copiar</button>
+            </div>
             <h3>Raw JSON</h3>
-            <pre><code>https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/productos.json</code></pre>
+            <div class="copy-container">
+              <pre><code>https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/productos.json</code></pre>
+              <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copiar</button>
+            </div>
           </div>
           <div>
             <h3>Endpoint de imagen</h3>
-            <pre><code>https://d3m4rc0.github.io/API-Productos-Resto/img/productos/arepas-carne.webp</code></pre>
+            <div class="copy-container">
+              <pre><code>https://d3m4rc0.github.io/API-Productos-Resto/img/productos/arepas-carne.webp</code></pre>
+              <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copiar</button>
+            </div>
             <h3>Raw imagen</h3>
-            <pre><code>https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/img/productos/arepas-carne.webp</code></pre>
+            <div class="copy-container">
+              <pre><code>https://raw.githubusercontent.com/D3M4rc0/API-Productos-Resto/main/img/productos/arepas-carne.webp</code></pre>
+              <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copiar</button>
+            </div>
           </div>
         </div>
 
         <h3>Consumir el JSON desde JavaScript</h3>
-        <pre><code>fetch('https://d3m4rc0.github.io/API-Productos-Resto/productos.json')
+        <div class="copy-container">
+          <pre><code>fetch('https://d3m4rc0.github.io/API-Productos-Resto/productos.json')
   .then(res => res.json())
   .then(productos => {
     console.log(productos);
   });</code></pre>
+          <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copiar</button>
+        </div>
 
         <h3>Ejemplo de imagen</h3>
-        <pre><code>&lt;img src="https://d3m4rc0.github.io/API-Productos-Resto/img/productos/arepas-carne.webp" alt="Arepas con Carne" /&gt;</code></pre>
+        <div class="copy-container">
+          <pre><code>&lt;img src="https://d3m4rc0.github.io/API-Productos-Resto/img/productos/arepas-carne.webp" alt="Arepas con Carne" /&gt;</code></pre>
+          <button class="copy-button" onclick="copyToClipboard(this.previousElementSibling.textContent)">Copiar</button>
+        </div>
       </section>
 
       <section class="card">
@@ -212,6 +251,38 @@
           clearTimeout(redirectTimer);
           stopButton.textContent = 'Redirección detenida';
           stopButton.disabled = true;
+        });
+      }
+
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+          // Mostrar feedback temporal
+          const button = event.target;
+          const originalText = button.textContent;
+          button.textContent = 'Copiado!';
+          button.style.background = '#10b981';
+          setTimeout(() => {
+            button.textContent = originalText;
+            button.style.background = '#404040';
+          }, 2000);
+        }).catch(err => {
+          console.error('Error al copiar:', err);
+          // Fallback para navegadores antiguos
+          const textArea = document.createElement('textarea');
+          textArea.value = text;
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textArea);
+
+          const button = event.target;
+          const originalText = button.textContent;
+          button.textContent = 'Copiado!';
+          button.style.background = '#10b981';
+          setTimeout(() => {
+            button.textContent = originalText;
+            button.style.background = '#404040';
+          }, 2000);
         });
       }
     </script>
