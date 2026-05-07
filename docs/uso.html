@@ -5,46 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cómo usar la API de Productos</title>
     <style>
+      :root {
+        color-scheme: dark;
+        font-family: Inter, system-ui, sans-serif;
+        background: #1a1a1a;
+        color: #f5f5dc;
+      }
       body {
         margin: 0;
-        font-family: Inter, system-ui, sans-serif;
-        background: #071013;
-        color: #f2efe6;
-        line-height: 1.7;
-        padding: 32px;
+        min-height: 100vh;
+        background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
       }
-      .container {
-        max-width: 860px;
+      .page {
+        max-width: 90vw;
         margin: 0 auto;
+        padding: 32px 24px 48px;
       }
       h1,
       h2,
       h3 {
-        color: #f6f1dc;
+        color: #f5f5dc;
       }
       p {
-        color: #d8d4c6;
+        color: #d3d3d3;
       }
       .card {
-        background: #0f1720;
-        border: 1px solid #1f2a3a;
-        border-radius: 20px;
-        padding: 24px;
+        background: #2a2a2a;
+        border: 1px solid #404040;
+        border-radius: 24px;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
+        padding: 28px;
         margin-bottom: 24px;
       }
       .link {
-        color: #8ab4f8;
+        color: #f5f5dc;
         text-decoration: none;
       }
       .link:hover {
         text-decoration: underline;
       }
       pre {
-        background: #0e1724;
-        color: #e8e2cb;
-        padding: 18px;
-        border-radius: 16px;
         overflow-x: auto;
+        padding: 18px;
+        background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+        color: #f5f5dc;
+        border-radius: 1rem;
+        line-height: 1.55;
+        font-family: ui-monospace, SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+        font-size: 0.95rem;
+        margin: 0;
       }
       ul {
         padding-left: 1.2rem;
@@ -55,7 +64,7 @@
     </style>
   </head>
   <body>
-    <div class="container">
+    <div class="page">
       <h1>Cómo usar la API de Productos</h1>
       <p>Esta carpeta recoge información de uso para los visitantes y desarrolladores que consumen la API. Aquí no se explica el mecanismo interno, solo cómo usarla.</p>
 
